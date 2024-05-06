@@ -9,7 +9,7 @@ CREATE TABLE "files"(
     "description" TEXT NULL,
     "is_pathology" BOOLEAN NOT NULL,
     "is_defected" BOOLEAN NULL,
-    "is_marked" BOOLEAN NOT NULL,
+    "is_annotated" BOOLEAN NOT NULL,
     "time_was_uploaded" DATE NOT NULL,
     "time_was_checked" DATE NULL
 );
@@ -23,8 +23,7 @@ CREATE TABLE "modality"(
     "name_of_disease" VARCHAR(255) NOT NULL,
     "type_of_data" VARCHAR(255) NOT NULL,
     "description" TEXT NULL,
-    "type_of_task" VARCHAR(255) NOT NULL,
-    "name_of_task" VARCHAR(255) NOT NULL
+    "type_of_task" VARCHAR [] NOT NULL
 );
 ALTER TABLE
     "modality" ADD PRIMARY KEY("id");
